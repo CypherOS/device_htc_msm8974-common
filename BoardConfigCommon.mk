@@ -140,6 +140,3 @@ BOARD_USES_MMCUTILS := true
 TARGET_RECOVERY_DEVICE_DIRS += device/htc/msm8974-common
 TARGET_RECOVERY_DEVICE_MODULES += chargeled
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
-
-# Hardware
-BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
