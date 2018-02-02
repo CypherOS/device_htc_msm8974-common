@@ -24,9 +24,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -35,12 +33,6 @@ TARGET_SCREEN_WIDTH := 1080
 # Device uses ultra-high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# FlipFlap
-PRODUCT_PACKAGES += FlipFlap
-
-# Gesture Handler
-PRODUCT_PACKAGES += GestureHandler
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -125,8 +117,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
-    libshim_camera \
-    Snap
+    libshim_camera
 
 # DRM
 PRODUCT_PACKAGES += \
